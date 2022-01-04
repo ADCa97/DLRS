@@ -1,2 +1,2 @@
 # DLRS
-deep learning recommender systems
+Deep Learning Recommender Systems
