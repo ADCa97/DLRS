@@ -1,8 +1,8 @@
-data/
+/data/
 ch02/FM/
 ch02/MF/
 .ipynb_checkpoints/
 
-recmodel/data/
+recmodel/data/ml-100k/
 recmodel/MF/
 **/__pycache__/
