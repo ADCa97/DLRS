@@ -64,12 +64,13 @@ if __name__ == "__main__":
         print("ItemCF & UserCF")
         modelItemCF = ItemCF(train_data, test_data)
         modelUserCF = UserCF(train_data, test_data)
-        itemCF_items_rank = modelItemCF.rec(args.K,args.N)
-        userCF_items_rank = modelUserCF.rec(args.K, args.N)
         print("Evaluate ItemCF:")
+        itemCF_items_rank = modelItemCF.rec(args.K,args.N)       
         rec_eval(itemCF_items_rank, test_data)
         print("Evaluate UserCF:")
+        userCF_items_rank = modelUserCF.rec(args.K, args.N)
         rec_eval(userCF_items_rank, test_data)
+        
         
     #items_rank = model.rec(args.K,args.N)
     #rec_eval(items_rank, test_data)
