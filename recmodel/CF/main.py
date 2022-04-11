@@ -49,10 +49,29 @@ if __name__ == "__main__":
     # 读取训练集和测试集
     train_data, test_data = preProcessData("../data/ml-1m/")
     if (args.model == "itemcf"):
+        print("ItemCF")
         model = ItemCF(train_data, test_data)
-    else:
+        print("Evaluate ItemCF:")
+        items_rank = model.rec(args.K,args.N)
+        rec_eval(items_rank, test_data)
+    elif (args.model == "usercf"):
+        print("UserCF")
         model = UserCF(train_data, test_data)
-    items_rank = model.rec(args.K,args.N)
-    rec_eval(items_rank, test_data)
+        items_rank = model.rec(args.K,args.N)
+        print("Evaluate UserCF:")
+        rec_eval(items_rank, test_data)
+    elif (args.model == "all"):
+        print("ItemCF & UserCF")
+        modelItemCF = ItemCF(train_data, test_data)
+        modelUserCF = UserCF(train_data, test_data)
+        itemCF_items_rank = modelItemCF.rec(args.K,args.N)
+        userCF_items_rank = modelUserCF.rec(args.K, args.N)
+        print("Evaluate ItemCF:")
+        rec_eval(itemCF_items_rank, test_data)
+        print("Evaluate UserCF:")
+        rec_eval(userCF_items_rank, test_data)
+        
+    #items_rank = model.rec(args.K,args.N)
+    #rec_eval(items_rank, test_data)
     
 

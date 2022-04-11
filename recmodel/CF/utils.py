@@ -42,6 +42,7 @@ def parse_args():
     parser.add_argument("--model", 
                         type=str, 
                         default="itemcf", 
+                        choices=["itemcf", "usercf", "all"],
                         help="use which algorithm to recommend")
     parser.add_argument("--K",
                         type=int,
