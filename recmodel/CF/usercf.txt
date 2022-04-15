@@ -1,0 +1,4 @@
+UserCF
+Evaluate UserCF:
+Recall:  3.09
+Precision:  10.28

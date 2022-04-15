@@ -1,0 +1,7 @@
+ItemCF & UserCF
+Evaluate ItemCF:
+Recall:  7.33
+Precision:  24.29
+Evaluate UserCF:
+Recall:  3.09
+Precision:  10.28

@@ -4,5 +4,6 @@ ch02/MF/
 .ipynb_checkpoints/
 
 recmodel/data/ml-100k/
+recmodel/data/criteo/
 recmodel/MF/
 **/__pycache__/

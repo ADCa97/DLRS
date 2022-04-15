@@ -1,0 +1,4 @@
+ItemCF
+Evaluate ItemCF:
+Recall:  7.33
+Precision:  24.29
